@@ -37,7 +37,7 @@ export class UploaderService {
       Bucket: this.bucketName,
       Key: key + '.jpg',
     });
-    return await getSignedUrl(this.client, command, { expiresIn: 3600 });
+    return await getSignedUrl(this.client, command);
   }
 
   async delete(key: string) {
